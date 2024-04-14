@@ -1,2 +1,3 @@
-# Hospital_management
-Application for the management of a hospital using PHP, HTML, CSS, Javascript, SQL
+# Hotel reservation application
+Application for the reserving hotel rooms using PHP, JS, CSS
+
