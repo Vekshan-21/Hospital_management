@@ -88,7 +88,7 @@ if($usermail == true){
                     <input type="text" name="Name" placeholder="Enter Full name">
                     <input type="email" name="Email" placeholder="Enter Email">
 
-                    <input type="text" name="Phone" placeholder="Enter Phoneno">
+                    <input type="text" name="Phone" placeholder="Enter Phone number">
                 </div>
 
                 <div class="line"></div>
