@@ -60,12 +60,9 @@ CREATE TABLE `payment` (
   `Name` varchar(30) NOT NULL,
   `Email` varchar(30) NOT NULL,
   `RoomType` varchar(30) NOT NULL,
-  `Bed` varchar(30) NOT NULL,
-  `NoofRoom` int(30) NOT NULL,
   `cin` date NOT NULL,
   `cout` date NOT NULL,
   `noofdays` int(30) NOT NULL,
-  `roomtotal` double(8,2) NOT NULL,
   `bedtotal` double(8,2) NOT NULL,
   `meal` varchar(30) NOT NULL,
   `mealtotal` double(8,2) NOT NULL,
@@ -73,50 +70,9 @@ CREATE TABLE `payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `payment`
---
-
-INSERT INTO `payment` (`id`, `Name`, `Email`, `RoomType`, `Bed`, `NoofRoom`, `cin`, `cout`, `noofdays`, `roomtotal`, `bedtotal`, `meal`, `mealtotal`, `finaltotal`) VALUES
-(41, 'Tushar pankhaniya', 'pankhaniyatushar9@gmail.com', 'Single Room', 'Single', 1, '2022-11-09', '2022-11-10', 1, 1000.00, 10.00, 'Room only', 0.00, 1010.00);
-
--- --------------------------------------------------------
 
 --
--- Table structure for table `room`
---
 
-CREATE TABLE `room` (
-  `id` int(30) NOT NULL,
-  `type` varchar(50) NOT NULL,
-  `bedding` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `room`
---
-
-INSERT INTO `room` (`id`, `type`, `bedding`) VALUES
-(4, 'Superior Room', 'Single'),
-(6, 'Superior Room', 'Triple'),
-(7, 'Superior Room', 'Quad'),
-(8, 'Deluxe Room', 'Single'),
-(9, 'Deluxe Room', 'Double'),
-(10, 'Deluxe Room', 'Triple'),
-(11, 'Guest House', 'Single'),
-(12, 'Guest House', 'Double'),
-(13, 'Guest House', 'Triple'),
-(14, 'Guest House', 'Quad'),
-(16, 'Superior Room', 'Double'),
-(20, 'Single Room', 'Single'),
-(22, 'Superior Room', 'Single'),
-(23, 'Deluxe Room', 'Single'),
-(24, 'Deluxe Room', 'Triple'),
-(27, 'Guest House', 'Double'),
-(30, 'Deluxe Room', 'Single');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `roombook`
 --
 
@@ -124,12 +80,9 @@ CREATE TABLE `roombook` (
   `id` int(10) NOT NULL,
   `Name` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Country` varchar(30) NOT NULL,
   `Phone` varchar(30) NOT NULL,
   `RoomType` varchar(30) NOT NULL,
-  `Bed` varchar(30) NOT NULL,
   `Meal` varchar(30) NOT NULL,
-  `NoofRoom` varchar(30) NOT NULL,
   `cin` date NOT NULL,
   `cout` date NOT NULL,
   `nodays` int(50) NOT NULL,
@@ -140,8 +93,9 @@ CREATE TABLE `roombook` (
 -- Dumping data for table `roombook`
 --
 
-INSERT INTO `roombook` (`id`, `Name`, `Email`, `Country`, `Phone`, `RoomType`, `Bed`, `Meal`, `NoofRoom`, `cin`, `cout`, `nodays`, `stat`) VALUES
-(41, 'Tushar pankhaniya', 'pankhaniyatushar9@gmail.com', 'India', '9313346569', 'Single Room', 'Single', 'Room only', '1', '2022-11-09', '2022-11-10', 1, 'Confirm');
+INSERT INTO `roombook` (`id`, `Name`, `Email`, `Phone`, `RoomType`,`Meal`,`cin`, `cout`, `nodays`, `stat`) VALUES
+(41, 'Pechu', 'p9@gmail.com', '931', 'Single Room', 'Room only', '2022-11-09', '2022-11-10', 1, 'Confirm');
+(41, 'Felix', 'felix@gmail.com', '555', 'Deluxe Room', 'Full Board', '2024-11-13', '2024-11-16', 3, 'Confirm');
 
 -- --------------------------------------------------------
 
@@ -160,7 +114,7 @@ CREATE TABLE `signup` (
 -- Dumping data for table `signup`
 --
 INSERT INTO `signup` (`UserID`, `Username`, `Email`, `Password`) VALUES
-(1, 'Tushar Pankhaniya', 'tusharpankhaniya2202@gmail.com', '123');
+(1, 'Vekshan', 'vekshan@gmail.com', '1234');
 
 -- --------------------------------------------------------
 
@@ -179,16 +133,11 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`id`, `name`, `work`) VALUES
-(1, 'Tushar pankhaniya', 'Manager'),
-(3, 'rohit patel', 'Cook'),
-(4, 'Dipak', 'Cook'),
-(5, 'tirth', 'Helper'),
-(6, 'mohan', 'Helper'),
-(7, 'shyam', 'cleaner'),
-(8, 'rohan', 'weighter'),
-(9, 'hiren', 'weighter'),
-(10, 'nikunj', 'weighter'),
-(11, 'rekha', 'Cook');
+(3, 'John Doe', 'Manager'),
+(4, 'Sarah John', 'Helper'),
+(5, 'James Smith', 'Chef');
+(6, 'Jane Miller', 'Cashier');
+
 
 --
 -- Indexes for dumped tables
@@ -233,6 +182,19 @@ ALTER TABLE `staff`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+CREATE TABLE `payment` (
+  `id` int(30) NOT NULL,
+  `Name` varchar(30) NOT NULL,
+  `Email` varchar(30) NOT NULL,
+  `RoomType` varchar(30) NOT NULL,
+  `Bed` varchar(30) NOT NULL,
+  `cin` date NOT NULL,
+  `cout` date NOT NULL,
+  `noofdays` int(30) NOT NULL,
+  `meal` varchar(30) NOT NULL,
+  `mealtotal` double(8,2) NOT NULL,
+  `finaltotal` double(8,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- AUTO_INCREMENT for table `emp_login`
