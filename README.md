@@ -6,6 +6,7 @@ Application for the reserving hotel rooms using PHP, JS, CSS
 - Installer php;
 - Installer XAMP et lancer APACHE et SQL
 - Utiliser le fichier royalhotel.db pour créer la base de données
+- Login admin: Admin@gmail.com password: 1234
 
 ## L'application:
 
@@ -80,29 +81,45 @@ In this section we will demonstrate how the application works:
 
   
 
-#### DRAW
+## Administrator side
 
+- Below is the dashboard that the admin can use to obtain information.
+  
+1. Dashboard
+2. Room booking
+3. Staff
+  
 <div align="center">
-  <img width="49%" src="./versions/v01/docs/Draw.png">
+  <img width="49%" src="./docs/dashboard.png">
 </div>
 
-<b>When there is a DRAW!</b> 
-
-
-### Quantitative
-
-In this section we show the quantitative results of our experiment. 
-
+- The room booking section where the reservation made by clients will be stored:
 <div align="center">
-  <img width="500px" alt="Plot Results" src="./versions/v01/docs/gameplay.png">
+  <img width="49%" src="./docs/booking.png">
 </div>
 
-<b>We can see above how the game looks like while playing.</b>
-
+- The admin can either confirm or delete a reservation:
+  
 <div align="center">
-  <img width="500px" alt="Plot Results" src="./versions/v01/docs/Score_increase.png">
+  <img width="49%" src="./docs/confirm.png">
+</div>
+  
+
+- The current staffs that are working for Royal Hotel:
+- The admin can add also new staff members based on their occupation:
+  1. Manager
+  2. Cook
+  3. Helper
+  4. Cleaner
+  5. Waiter
+     
+<div align="center">
+  <img width="49%" src="./docs/staffs.png">
 </div>
 
-<b>As the players win, their respective score is incremented.</b>
+
+## Conclusion
+
+This document provides an overview of how the application functions, the main programs involved and the credentials to access administrator privilege. Feel free to use the application. :)
 
 
