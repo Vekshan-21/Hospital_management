@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
 
-:root {
-    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
-    --bg-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.621);
-}
-*::-webkit-scrollbar{
-    width: .4rem;
-}
-*::-webkit-scrollbar-track{
-    background: rgb(6, 6, 44);
-}
-*::-webkit-scrollbar-thumb{
-    background: #0040ff;
+@keyframes bgChange {
+    0% { background-color: rgba(175, 175, 222, 0.511); }
+    25% { background-color: rgba(222, 175, 175, 0.511); }
+    50% { background-color: rgba(175, 222, 175, 0.511); }
+    75% { background-color: rgba(175, 222, 222, 0.511); }
+    100% { background-color: rgba(222, 175, 222, 0.511); }
 }
 
+body {
+    animation: bgChange 10s infinite; /* Change the duration (10s) as needed */
+}
 * {
     margin: 0;
     padding: 0;
@@ -70,14 +67,7 @@ ul li a:hover{
     color: black;
 }
 
-.logo {
-    height: 90%;
-    display: flex;
-    justify-content: center;
-}
-.logo .bluebirdlogo {
-    height: 100%;
-}
+
 
 .logo p {
     height: 100%;
@@ -118,7 +108,15 @@ ul li a:hover{
 }
 
 
-#firstsection .welcomeline{
+@keyframes colorChange {
+    0% { color: aquamarine; }
+    25% { color: coral; }
+    50% { color: gold; }
+    75% { color: mediumorchid; }
+    100% { color: deepskyblue; }
+}
+
+#firstsection .welcomeline .welcometag {
     position: absolute; 
     display: flex;
     height: 100vh;
@@ -126,34 +124,28 @@ ul li a:hover{
     justify-content: center;
     align-items: center;
     z-index: 100;
-}
-
-#firstsection .welcometag{
     font-size: 110px;
     font-weight: bold;
     font-family: 'Cookie', cursive;
     letter-spacing: 2px;
     line-height: 100px;
     padding: 5px;
-    /* text gradiant */
-    background: -webkit-linear-gradient(317deg, rgba(0, 60, 255, 0.81) 0%, rgb(255 0 123) 70%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    animation: colorChange 5s infinite; /* Change the duration (5s) as needed */
 }
 
-/* secondsection */
+
+
 
 #secondsection{
     height: 100vh;
 }
 
 #secondsection img{
-    /* background-size: cover; */
+   
     height: 100vh;
     width: 100%;
     filter: blur(20px);
     position: absolute;
-    /* -webkit-backdrop-filter: blur(30px);  */
     z-index: -2;
 }
 
@@ -162,7 +154,6 @@ ul li a:hover{
     top: 90px;
     height: 400px;
     width: 100%;
-    /* background-color: #0040ff; */
 }
 
 .head{
@@ -182,7 +173,7 @@ ul li a:hover{
     background-color: rgb(8, 8, 48);
     border-radius: 10px;
     overflow: hidden;
-    /* margin: 0 20px; */
+   
 }
 
 .hotelphoto{
@@ -198,9 +189,7 @@ ul li a:hover{
 .h2{
     background-image: url(../image/hotel2photo.jpg);
 }
-.h3{
-    background-image: url(../image/hotel3photo.avif);
-}
+
 .h4{
     background-image: url(../image/hotel4photo.jpg);
 }
@@ -227,7 +216,7 @@ font-size: 30px;
    margin: 10px;
 }
 
-/* roombookcss */
+
 
 #guestdetailpanel{
     height: 100vh;
@@ -312,10 +301,6 @@ font-size: 30px;
     color: white;
     font-size: 25px;
     cursor: pointer;
-}
-
-#contactus .createdby{
-    color: white;
 }
 
 /* responsive stuff */
