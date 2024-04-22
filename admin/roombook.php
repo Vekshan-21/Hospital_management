@@ -35,7 +35,7 @@ include '../config.php';
                     <h4>Guest information</h4>
                     <input type="text" name="Name" placeholder="Enter Full name" required>
                     <input type="email" name="Email" placeholder="Enter Email" required>
-                    <input type="text" name="Phone" placeholder="Enter Phoneno" required>
+                    <input type="text" name="Phone" placeholder="Enter Phone number" required>
                 </div>
 
                 <div class="line"></div>
