@@ -28,6 +28,7 @@ In this section we will demonstrate how the application works:
 #### Login page
 
 -  Here is the login page when we first start the application.
+-  User can either choose <b>User-side</b> or <b>Staff side</b>.
 
 <div align="center">
   <img width="49%"  src="./docs/login.png">
