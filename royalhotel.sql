@@ -94,9 +94,8 @@ CREATE TABLE `roombook` (
 --
 
 INSERT INTO `roombook` (`id`, `Name`, `Email`, `Phone`, `RoomType`,`Meal`,`cin`, `cout`, `nodays`, `stat`) VALUES
-(41, 'Pechu', 'p9@gmail.com', '931', 'Single Room', 'Room only', '2022-11-09', '2022-11-10', 1, 'Confirm');
-(41, 'Felix', 'felix@gmail.com', '555', 'Deluxe Room', 'Full Board', '2024-11-13', '2024-11-16', 3, 'Confirm');
-
+(41, 'Pechu', 'p9@gmail.com', '931', 'Single Room', 'Room only', '2022-11-09', '2022-11-10', 1, 'Confirm'),
+(45, 'Felix', 'felix@gmail.com', '777', 'Superior Room', 'Full Board', '2022-11-09', '2022-11-10', 1, 'Confirm');
 -- --------------------------------------------------------
 
 --
@@ -135,15 +134,10 @@ CREATE TABLE `staff` (
 INSERT INTO `staff` (`id`, `name`, `work`) VALUES
 (3, 'John Doe', 'Manager'),
 (4, 'Sarah John', 'Helper'),
-(5, 'James Smith', 'Chef');
+(5, 'James Smith', 'Chef'),
 (6, 'Jane Miller', 'Cashier');
 
 
---
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `emp_login`
 --
 ALTER TABLE `emp_login`
@@ -155,13 +149,6 @@ ALTER TABLE `emp_login`
 ALTER TABLE `payment`
   ADD PRIMARY KEY (`id`);
 
---
--- Indexes for table `room`
---
-ALTER TABLE `room`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `roombook`
 --
 ALTER TABLE `roombook`
@@ -187,7 +174,6 @@ CREATE TABLE `payment` (
   `Name` varchar(30) NOT NULL,
   `Email` varchar(30) NOT NULL,
   `RoomType` varchar(30) NOT NULL,
-  `Bed` varchar(30) NOT NULL,
   `cin` date NOT NULL,
   `cout` date NOT NULL,
   `noofdays` int(30) NOT NULL,
@@ -203,12 +189,7 @@ ALTER TABLE `emp_login`
   MODIFY `empid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `room`
---
-ALTER TABLE `room`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
---
 -- AUTO_INCREMENT for table `roombook`
 --
 ALTER TABLE `roombook`
